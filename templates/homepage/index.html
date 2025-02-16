@@ -5,11 +5,15 @@
 
 {% block content %}
 <link href="{% static 'apps/homepage/index.css' %}" rel="stylesheet">
-<div class="container">
+
+<div class="container py-5 my-5">
   <div id="djeym-app" class="djeym"></div>
 </div>
+
+
+
 <script type="text/javascript" src="{% static "djeym/js/jquery.min.js" %}"></script>
 <script src="{% static "djeym/js/jquery-regex.min.js" %}"></script>
-{% djeym_yandex_map slug='karta' lang=request.LANGUAGE_CODE %}
+ {% djeym_yandex_map slug='karta' lang=request.LANGUAGE_CODE %}
 
 {% endblock %}
