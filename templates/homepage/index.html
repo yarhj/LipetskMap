@@ -4,14 +4,12 @@
 {% load i18n static djeymtags %}
 
 {% block content %}
-
-<div class="row m-2">
-  <div class="col-12">
-    <div id="djeym-app" class="djeym"></div>
-    <script type="text/javascript" src="{% static "djeym/js/jquery.min.js" %}"></script>
-    <script src="{% static "djeym/js/jquery-regex.min.js" %}"></script>
-    {% djeym_yandex_map slug='karta' lang=request.LANGUAGE_CODE %}
-  </div>
+<link href="{% static 'apps/homepage/index.css' %}" rel="stylesheet">
+<div class="container">
+  <div id="djeym-app" class="djeym"></div>
 </div>
+<script type="text/javascript" src="{% static "djeym/js/jquery.min.js" %}"></script>
+<script src="{% static "djeym/js/jquery-regex.min.js" %}"></script>
+{% djeym_yandex_map slug='karta' lang=request.LANGUAGE_CODE %}
 
 {% endblock %}
